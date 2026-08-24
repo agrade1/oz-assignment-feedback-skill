@@ -20,7 +20,7 @@ python3 ~/.codex/skills/.system/skill-installer/scripts/install-skill-from-githu
   --repo agrade1/oz-assignment-feedback-skill \
   --path oz-assignment-feedback-work \
   --ref main \
-  --method download \
+  --method auto \
   --name oz-assignment-feedback
 ```
 
