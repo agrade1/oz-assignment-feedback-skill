@@ -1,0 +1,4 @@
+interface:
+  display_name: "OZ 6기 Assignment Feedback"
+  short_description: "Check 6기 Notion submissions and reply to OZ LMS challenges"
+  default_prompt: "$oz-assignment-feedback 오늘 기준 과제 피드백 진행해"
