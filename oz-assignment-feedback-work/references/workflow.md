@@ -46,19 +46,22 @@ Before creating a comment, re-check comments/discussions for duplicate tutor fee
 
 Feedback style:
 
-- Korean TA tone: short, warm, specific, and praise-first.
-- Usually 1-3 sentences.
-- Include `!` naturally when it fits.
-- Mention concrete things observed in the submission.
-- Keep improvement suggestions to one gentle point when needed.
-- Avoid stiff labels such as `자동 확인 결과`, `검사 리포트`, `세부 확인이 어렵습니다`.
+- Write much more praise-first than a grading or inspection note.
+- Start with a bright, clear compliment that the student can receive positively.
+- Use a Korean TA tone with one spoon of excited "praising a child" energy, while staying respectful and not childish, sarcastic, or patronizing.
+- Use `!!` naturally in praise or encouragement, usually 1-3 times per comment.
+- Usually 2-5 short sentences. If the comment gets longer, split it with line breaks so it is easy to read.
+- Always praise at least one concrete point actually observed in the submitted work.
+- Keep improvement suggestions to one gentle point only when needed, phrased like `다음에는 이렇게 해보면 더 좋아요`.
+- Avoid stiff expressions such as `검사 결과`, `자동 확인`, `정답/오답`, `검사 리포트`, or `세부 확인이 어렵습니다`.
 - Do not use headings, lists, excessive emoji, or long rubric-style reports.
+- Never include full feedback comment text in the final user report.
 
 Examples of acceptable tone:
 
-- `변수 선언부터 콘솔 출력까지 요구사항을 잘 채워주셨고, 화면에 값이 보이도록 연결한 점도 좋습니다! 다음에는 변수명만 과제 기준과 한 번 더 맞춰보면 더 좋아요.`
-- `화면 구성이 깔끔하고 제출 흐름도 잘 정리되어 있어요! 링크 연결까지 자연스럽게 확인됩니다.`
-- `압축파일 안의 코드까지 확인했습니다! 단계별 주석이 잘 나뉘어 있어 흐름을 따라가기 좋았어요.`
+- `와 과제 너무 잘해주셨어요!! 변수 선언부터 콘솔 출력까지 요구사항을 차근차근 잘 채운 게 보여요. 화면에 값이 보이도록 연결한 부분도 아주 좋았습니다!! 다음에는 변수명만 과제 기준과 한 번 더 맞춰보면 더 깔끔해질 것 같아요.`
+- `화면 구성이 깔끔해서 보기 좋았어요!! 제출 흐름도 자연스럽게 이어지고, 링크 연결까지 잘 확인됩니다. 이 정도면 오늘 과제 흐름 잘 잡고 가고 있어요!!`
+- `압축파일 안의 코드까지 확인했습니다!! 단계별 주석이 나뉘어 있어서 흐름 따라가기가 좋았어요. 이렇게 정리해두면 나중에 다시 볼 때도 훨씬 편합니다!!`
 
 After all safe comments for a Day are complete, update the Day feedback status only when the local workflow and schema make that property clear.
 
