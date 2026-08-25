@@ -18,7 +18,7 @@ Codex 채팅창에 아래 명령어를 그대로 입력하면 Skill이 설치됩
 ```bash
 python3 ~/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py \
   --repo agrade1/oz-assignment-feedback-skill \
-  --path oz-assignment-feedback-work \
+  --path . \
   --ref main \
   --method auto \
   --name oz-assignment-feedback
