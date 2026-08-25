@@ -46,6 +46,34 @@ Notion attachment handling details:
 
 If a file/image/archive cannot be opened because of permissions, tool limits, broken links, unsupported format, or missing data, do not leave a Notion feedback comment. Report the student, Day, and unreadable reason.
 
+Unreadable submission tracking:
+
+- Keep a compact internal list for every unreadable submission encountered during the run.
+- For each item, record the Day, student name for the user-facing report, submission surface, file name/extension if visible, source form, attempted access path, and short failure reason.
+- Submission surface examples: `Notion 파일과 미디어 속성`, `Notion 본문 파일 블록`, `Notion 댓글 첨부`, `OZ LMS 댓글 첨부`, `GitHub 링크`, `외부 URL`, `이미지 캡쳐`.
+- Source form examples: `file:// Notion attachment metadata`, `https://file.notion.com signed URL`, `.zip`, `.html`, `.css`, `.js`, `.png`, `.jpg`, `GitHub repository`, `broken/expired URL`.
+- If the same unreadable pattern looks like a skill/tooling gap rather than a one-off login or permission problem, offer to register a GitHub issue in `agrade1/oz-assignment-feedback-skill`.
+- Create the GitHub issue only when the user asks for issue registration or approves it after the run. Creating an issue is an external write.
+- Because the repository is public, do not include student names, private Notion URLs, signed file URLs, tokens, or personal data in the GitHub issue unless the user explicitly approves that disclosure. Prefer anonymized details such as Day, file extension, source surface, and redacted error category.
+- Suggested issue title: `Unreadable submission: <source surface> <file type or URL type>`.
+- Suggested issue body:
+
+```markdown
+## Case
+- Cohort: 1인 창업가 개발부트캠프 6기
+- Day:
+- Source surface:
+- File/link type:
+- Failure category:
+
+## What happened
+
+## Expected behavior
+
+## Notes
+- Private student/page/file details omitted by default.
+```
+
 Never quote or expose secrets, API keys, tokens, or personal data in public comments. If visible, advise the student to hide/remove them without reproducing the value.
 
 ## 4. Write Notion Feedback
@@ -110,6 +138,7 @@ Keep the final user report concise:
 - Students with Notion feedback created.
 - Students with OZ replies created.
 - Skipped items with short reason, for example existing feedback, no submission, unreadable file, LMS challenge link missing, login required, or matching uncertain.
+- Unreadable submission patterns and whether a GitHub issue was created, offered, or not requested.
 - Downloaded attachment cleanup status when files were downloaded.
 
 Do not include detailed intermediate logs unless requested.
