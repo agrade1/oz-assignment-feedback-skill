@@ -36,6 +36,14 @@ Check all possible submission forms:
 - ZIP archives: extract to a temporary directory, inspect source files such as HTML/CSS/JS/README/assets, then delete the archive and extracted files after processing.
 - Images/screenshots: visually inspect when possible. Use screenshot evidence only for what is visible; do not claim to have read code from an image unless it is legible.
 
+Notion attachment handling details:
+
+- Notion database `FILES` properties can appear in connector output as encoded `file://{...}` references, for example a `파일과 미디어` value with `source: attachment:...:filename.zip`. These are Notion attachment metadata references, not local file paths and not direct download URLs.
+- Do not try to download a `file://{...}` Notion attachment reference with shell tools or generic URL fetchers. Decode it only to identify the filename, source, and permission record.
+- If a submission has a `file://{...}` attachment reference, first check whether the same actual work is also available through a URL property, page body link, bookmark, repository link, inline code, image block, or comment attachment. If that alternate source is enough to inspect the work, use it and do not block feedback on the unavailable duplicate attachment.
+- If the attachment is the only submitted work, open the Notion page in the browser with the user's logged-in session and click the attachment in the Notion UI to obtain a temporary `https://file.notion.com/...` signed download URL or trigger a browser download. Inspect the downloaded file, then delete the archive and extracted files after the comment is completed.
+- If the browser cannot expose/download the file because of login, permission, expired signed URL, UI limitation, or missing browser tooling, do not write feedback. Report the exact reason as `Notion 파일 속성 첨부 다운로드 필요/불가` with the student and Day.
+
 If a file/image/archive cannot be opened because of permissions, tool limits, broken links, unsupported format, or missing data, do not leave a Notion feedback comment. Report the student, Day, and unreadable reason.
 
 Never quote or expose secrets, API keys, tokens, or personal data in public comments. If visible, advise the student to hide/remove them without reproducing the value.
