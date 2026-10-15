@@ -7,6 +7,14 @@ description: Run assignment feedback for OZ Coding School 1인 창업가 개발�
 
 Use this skill when the user asks to check, write, continue, or automate OZ Coding School assignment feedback for `1인 창업가 개발부트캠프 6기` or `창업가 6기`.
 
+## Execution Model
+
+- Default recommendation: GPT-6 Sol (`gpt-6-sol`). GPT-6 Luna (`gpt-6-luna`) is also an allowed user choice.
+- When creating or updating a feedback automation at the user's request, use `gpt-6-sol` unless the user selects `gpt-6-luna` or another model explicitly. Preserve the automation's other settings.
+- The repository's `.codex/config.toml` provides a project default when this repository is used as a trusted Codex project. Installing the skill alone does not apply that project config to unrelated projects.
+- A skill cannot change the model of its own running conversation or repair a model error that occurs before the skill loads. If the user reports an unavailable GPT-5.5 selection, explain how to select GPT-6 Sol or GPT-6 Luna in that conversation or automation; do not claim the remote account was updated.
+- See [README.md](README.md#모델-설정) for existing-user recovery steps.
+
 ## Fixed 6기 Context
 
 This skill is intentionally fixed to 6기. Do not ask the user to configure or select a cohort unless they explicitly want to change the skill.

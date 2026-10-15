@@ -11,6 +11,45 @@
 - GitHub 접근 권한 또는 공개 GitHub 제출물 접근
 - OZ Coding School 계정
 
+## 모델 설정
+
+기본 권장 모델은 **GPT-6 Sol (`gpt-6-sol`)**입니다. **GPT-6 Luna (`gpt-6-luna`)**로도 사용할 수 있습니다.
+
+### 기존 사용자가 GPT-5.5 선택 때문에 실행되지 않을 때
+
+다음 오류는 스킬 본문이 아니라 Codex의 대화 요약(compact) 요청에서 지원되지 않는 모델을 호출한 경우입니다.
+
+```text
+Error running remote compact task:
+The 'gpt-5.5' model is not supported when using Codex with a ChatGPT account.
+```
+
+1. Codex 대화의 모델 선택에서 **GPT-6 Sol** 또는 **GPT-6 Luna**를 선택합니다.
+2. 예약 자동화로 실행 중이면 해당 자동화의 실행 모델도 같은 모델로 변경합니다. 대화 모델과 자동화 모델은 각각 확인해 주세요.
+3. 모델 변경 후에도 기존 대화에서 같은 요약 오류가 이어지면, 선택한 모델로 새 대화를 열고 같은 스킬을 호출해 미처리 과제부터 이어서 진행합니다. 기존 피드백 댓글은 중복 확인 후 건너뜁니다.
+
+모델이 목록에 나타나지 않으면 사용하는 Codex를 업데이트하고, 해당 계정에서 선택 가능한 모델을 확인해 주세요. 저장소에는 GPT-5.5를 고정한 설정이 없으며, 스킬을 다시 설치하는 것만으로 기존 대화나 자동화의 모델이 바뀌지는 않습니다.
+
+### 저장소를 Codex 프로젝트로 열어 실행할 때
+
+저장소의 `.codex/config.toml`에 다음 프로젝트 기본값이 포함되어 있습니다.
+
+```toml
+model = "gpt-6-sol"
+```
+
+Luna를 사용하려면 이 프로젝트 설정의 모델을 `gpt-6-luna`로 변경할 수 있습니다. 프로젝트 설정은 신뢰한 프로젝트에서만 적용되며, 대화나 실행 명령에서 모델을 명시했다면 그 선택을 별도로 확인해야 합니다.
+
+CLI에서 한 번 실행할 때 모델을 직접 선택할 수도 있습니다.
+
+```bash
+codex -m gpt-6-sol
+```
+
+스킬만 설치한 경우에는 위 프로젝트 설정이 작업 중인 다른 프로젝트에 자동 적용되지 않습니다. Codex의 모델 선택 또는 사용 중인 프로젝트의 설정에서 모델을 지정해 주세요.
+
+공식 문서: [Codex 설정](https://learn.chatgpt.com/docs/config-file/config-basic), [GPT-6 Sol](https://developers.openai.com/api/docs/models/gpt-6-sol), [GPT-6 Luna](https://developers.openai.com/api/docs/models/gpt-6-luna).
+
 ## 설치방법
 
 Codex 채팅창에 아래 명령어를 그대로 입력하면 Skill이 설치됩니다.

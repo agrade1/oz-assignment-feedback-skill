@@ -1,0 +1,2 @@
+# Project default; an explicit conversation or automation model takes precedence.
+model = "gpt-6-sol"
